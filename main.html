@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="common/common.css">
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="common/common.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title></title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <article class="local-btn"></article>
+            <article class="header-icons">
+                <a href="pages/mypage.html" class="my-page"><span class="material-symbols-outlined">account_circle</span></a>
+                <a href="pages/settings.html" class="settings"><span class="material-symbols-outlined">settings</span></a>
+            </article>
+        </header>
+        <main id="main">
+            <article class="temp-box">
+                <h2 class="temp"></h2>
+                <div class="temp-wrap">
+                    <span class="min-temp"></span> / <span class="max-temp"></span>
+                </div>
+                <p class="temp-announce"></p>
+            </article>
+            <article class="gurumi weather">
+                <img src="asset/img/gurumi/gurumi.png" alt="구르미의 대표캐릭터" class="gurumi-main">
+                <div class="rain-set">
+                    <img src="asset/img/gurumi/face1.png" alt="구르미의 기본 표정" class="default face">
+                    <img src="asset/img/gurumi/umbrella.png" alt="구르미가 쓰고있는 우산" class="umbrella">
+                    <img src="asset/img/gurumi/rain.png" alt="빗방울" class="rain1">
+                    <img src="asset/img/gurumi/rain.png" alt="빗방울" class="rain2">
+                    <img src="asset/img/gurumi/rain.png" alt="빗방울" class="rain3">
+                </div>
+                <div class="clouds-set">
+                    <img src="asset/img/gurumi/gurumi.png" alt="안개" class="cloud1">
+                    <img src="asset/img/gurumi/gurumi.png" alt="안개" class="cloud2">
+                    <img src="asset/img/gurumi/gurumi.png" alt="안개" class="cloud3">
+                </div>
+                <div class="clear-set">
+                    <img src="asset/img/gurumi/sunglass.png" alt="선글라스" class="sunglass face">
+                    <img src="asset/img/gurumi/sun.png" alt="태양" class="sun">
+                </div>
+            </article>
+        </main>
+        <section id="outfit">
+            <header class="cont-title">
+                <h3>Today's Outfit</h3>
+            </header>
+            <article class="cont-box outer-list">
+                <h4 class="category-title">아우터</h4>
+                <ul>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_outer1.png" alt="겨울 코트">
+                        <p class="cont-txt">겨울 코트</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_outer2.png" alt="롱패딩">
+                        <p class="cont-txt">롱패딩</p>
+                    </li>
+                    <li class="content" data-range="mild">
+                        <img src="asset/img/mild/mild_outer1.png" alt="가죽자켓">
+                        <p class="cont-txt">가죽자켓</p>
+                    </li>
+                    <li class="content" data-range="mild">
+                        <img src="asset/img/mild/mild_outer2.png" alt="후드집업">
+                        <p class="cont-txt">후드집업</p>
+                    </li>
+                    <li class="content" data-range="mild">
+                        <img src="asset/img/mild/mild_outer3.png" alt="자켓">
+                        <p class="cont-txt">자켓</p>
+                    </li>
+                </ul>
+            </article>
+            <article class="cont-box top-list">
+                <h4 class=" category-title">상의</h4>
+                <ul>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_top1.png" alt="기모 맨투맨">
+                        <p class="cont-txt">기모 맨투맨</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_top2.png" alt="두꺼운 니트">
+                        <p class="cont-txt">두꺼운 니트</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_top4.png" alt="목폴라">
+                        <p class="cont-txt">목폴라</p>
+                    </li>
+                    <li class="content" data-range="mild warm">
+                        <img src="asset/img/mild/mild_top1.png" alt="가디건">
+                        <p class="cont-txt">가디건</p>
+                    </li>
+                    <li class="content" data-range="mild">
+                        <img src="asset/img/mild/mild_top2.png" alt="셔츠">
+                        <p class="cont-txt">셔츠</p>
+                    </li>
+                    <li class="content" data-range="mild warm">
+                        <img src="asset/img/mild/mild_top3.png" alt="후드티">
+                        <p class="cont-txt">후드티</p>
+                    </li>
+                    <li class="content" data-range="warm mild">
+                        <img src="asset/img/warm/warm_top1.png" alt="긴팔 티셔츠">
+                        <p class="cont-txt">긴팔 티셔츠</p>
+                    </li>
+                    <li class="content" data-range="hot">
+                        <img src="asset/img/hot/hot_top1.png" alt="반팔 셔츠">
+                        <p class="cont-txt">반팔 셔츠</p>
+                    </li>
+                    <li class="content" data-range="hot">
+                        <img src="asset/img/hot/hot_top2.png" alt="민소매">
+                        <p class="cont-txt">민소매</p>
+                    </li>
+                    <li class="content" data-range="hot">
+                        <img src="asset/img/hot/hot_top4.png" alt="반팔 티셔츠">
+                        <p class="cont-txt">반팔 티셔츠</p>
+                    </li>
+                </ul>
+            </article>
+            <article class="cont-box bottom-list">
+                <h4 class=" category-title">하의</h4>
+                <ul>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_bottom1.png" alt="하의 히트택">
+                        <p class="cont-txt">하의 히트택</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_bottom2.png" alt="기모바지">
+                        <p class="cont-txt">기모바지</p>
+                    </li>
+                    <li class="content" data-range="mild">
+                        <img src="asset/img/mild/mild_bottom1.png" alt="슬랙스">
+                        <p class="cont-txt">슬랙스</p>
+                    </li>
+                    <li class="content" data-range="mild">
+                        <img src="asset/img/mild/mild_bottom2.png" alt="청바지">
+                        <p class="cont-txt">청바지</p>
+                    </li>
+                    <li class="content" data-range="warm">
+                        <img src="asset/img/warm/warm_bottom1.png" alt="얇은 스커트">
+                        <p class="cont-txt">얇은 스커트</p>
+                    </li>
+                    <li class="content" data-range="warm hot">
+                        <img src="asset/img/warm/warm_bottom2.png" alt="짧은 스커트">
+                        <p class="cont-txt">짧은 스커트</p>
+                    </li>
+                    <li class="content" data-range="warm hot">
+                        <img src="asset/img/warm/warm_bottom3.png" alt="반바지">
+                        <p class="cont-txt">반바지</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="item">
+            <article class="cont-title">
+                <h3>Today's ITEM</h3>
+            </article>
+            <article class="cont-box">
+                <ul>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_item1.png" alt="귀마개">
+                        <p class="cont-txt">귀마개</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_item2.png" alt="장갑">
+                        <p class="cont-txt">장갑</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_item3.png" alt="장갑">
+                        <p class="cont-txt">장갑</p>
+                    </li>
+                    <li class="content" data-range="cold">
+                        <img src="asset/img/cold/cold_item4.png" alt="머플러">
+                        <p class="cont-txt">머플러</p>
+                    </li>
+                    <li class="content" data-weather="clear">
+                        <img src="asset/img/weather/clear_item.png" alt="선글라스">
+                        <p class="cont-txt">선글라스</p>
+                    </li>
+                    <li class="content" data-weather="clear">
+                        <img src="asset/img/weather/clear_item2.png" alt="캡모자">
+                        <p class="cont-txt">캡모자</p>
+                    </li>
+                    <li class="content" data-weather="clear">
+                        <img src="asset/img/weather/clear_item3.png" alt="운동화">
+                        <p class="cont-txt">운동화</p>
+                    </li>
+                    <li class="content" data-weather="clear">
+                        <img src="asset/img/weather/clear_item4.png" alt="스니커즈">
+                        <p class="cont-txt">스니커즈</p>
+                    </li>
+                    <li class="content" data-weather="rain">
+                        <img src="asset/img/weather/rain_item1.png" alt="우산">
+                        <p class="cont-txt">우산</p>
+                    </li>
+                    <li class="content" data-weather="rain">
+                        <img src="asset/img/weather/rain_item2.png" alt="장화">
+                        <p class="cont-txt">장화</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

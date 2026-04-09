@@ -1,0 +1,60 @@
+/* 섹션 타이틀 (계정 정보, 위치 서비스) */
+.section-title {
+    font-size: 14px;
+    color: #666;
+    margin: 20px 0 10px 10px;
+}
+
+/* 메뉴 그룹 간격 조정 */
+.settings-container .menu-group {
+    margin-bottom: 20px;
+}
+
+/* 클릭 불가능한 항목 (전화번호, 이메일) */
+.menu-item.disabled {
+    cursor: default;
+}
+
+.menu-item.disabled .value {
+    color: #888;
+}
+
+/* 비밀번호 변경 모달 내 입력창 그룹 */
+.pw-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pw-wrapper input {
+    background: #e9e9e9;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* 하단 비밀번호 변경 버튼 */
+.submit-btn {
+    width: calc(100% - 40px);
+    margin: 20px;
+    padding: 18px;
+    border-radius: 15px;
+    border: none;
+    background-color: #A0C3D2; /* 초기 연한 컬러 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* 모든 조건(현재PW 일치, 새PW 확인 일치) 만족 시 적용 */
+.submit-btn.active {
+    background-color: var(--main-color) !important; /* 어두운 색상으로 변경 */
+    opacity: 1;
+    cursor: pointer;
+}

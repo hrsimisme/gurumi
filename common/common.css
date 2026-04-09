@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+:root {
+    --main-color : #578BCE;
+    --rain-bg : #838383;
+    --clear-bg : #73b6f0;
+    --cloud-bg : #9ba5ae;
+    --snow-bg : #dbdbdb;
+    --squall-bg : #b0d6e4;
+
+    --public-bg : #d9d9d9;
+    --box-bg : #e5e5e5;
+    --box-shadow : #555;
+    --index-box : rgba(185, 185, 185, 0.554);
+    
+    --txt-white : #efefef;
+    --txt-dark : #4b4b4b;
+}
+
+
+
+/* === 레이아웃 === */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    max-width: 500px; /* 모바일 앱 스타일이라면 최대 너비 제한 */
+    margin: 0 auto;
+
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+}
+
+
+
+/* ==== 서브 레이아웃 css ==== */
+
+body.body {
+    color: var(--txt-dark);
+    background: var(--public-bg) !important;
+}
+
+.wrap {
+    padding: 0 24px;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    position: relative;
+}
+.back-btn {
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.menu-list {
+    margin-top: 20px;
+}
+.menu-item {
+    background: var(--box-bg);
+    padding: 18px 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+
+/* 토글 스위치 디자인 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px; width: 22px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider { background-color: var(--clear-bg); } /* 메인컬러 */
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* 바텀 시트 모달 */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1000;
+}
+.modal-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0; width: 100%;
+    background: #eee; /* 이미지와 유사한 연한 회색 */
+    border-radius: 20px 20px 0 0;
+    transition: bottom 0.3s ease;
+    padding-bottom: 40px;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+}
+.modal-save { color: var(--clear-bg); font-weight: bold; }

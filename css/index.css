@@ -1,0 +1,128 @@
+/* login.css */
+
+/* 전체 화면 중앙 정렬 */
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #dbdbdb !important; /* 배경색 고정 */
+}
+
+/* 상단 로고 및 타이틀 */
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cloud-logo {
+    font-size: 60px;
+    margin-bottom: 10px;
+    display: inline-block;
+    animation: floating 3s ease-in-out infinite; /* 둥둥 떠 있는 효과 */
+}
+
+.login-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 입력 폼 영역 */
+.login-form {
+    width: 100%;
+    max-width: 340px;
+}
+
+.input-row {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.input-row input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* 포커스 되었을 때 테두리 강조 */
+.input-row input:focus {
+    border-color: var(--clear-bg); /* 공통 컬러 사용 */
+}
+
+/* 비밀번호 보기 아이콘 */
+.pw-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* 로그인 버튼 */
+.login-btn {
+    width: 100%;
+    padding: 18px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--clear-bg);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 하단 링크 영역 */
+.login-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+}
+
+.find-info {
+    margin-bottom: 15px;
+}
+
+.find-info a {
+    color: #888;
+    text-decoration: none;
+}
+
+.divider {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.signup-link a {
+    color: var(--clear-bg);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+/* --- 애니메이션 정의 --- */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}

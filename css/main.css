@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+body {
+    color: #efefef;
+}
+
+#wrap {
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+/* === header === */
+
+#header {
+    width: 100%;
+    height: 70px;
+    padding: 0 24px;
+    background-color: var(--rain-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+.header-icons {
+    width: 60px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* === main === */
+
+#main {
+    width: 100%;
+}
+.temp-box {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+.temp {
+    font-size: 80px;
+    padding: 10px 0;
+    font-weight: 900;
+}
+.temp span {
+    display: inline-block;
+    padding-left: 5px;
+    font-size: 40px;
+}
+.temp-wrap {
+    padding: 10px;
+}
+.temp-announce {
+    font-size: 14px;
+}
+
+.rain-set, .clear-set, .clouds-set {
+    display: none;
+}
+.weather.rain .rain-set {
+    display: block;
+}
+.weather.clear .clear-set {
+    display: block;
+}
+.weather.clouds .clouds-set {
+    display: block;
+}
+
+/* === rain set === */
+.gurumi {
+    width: 100%;
+    height: 270px;
+    position: relative;
+    padding: 16px 24px;
+}
+.gurumi img {
+    position: absolute;
+    filter: drop-shadow(2px 2px 2px var(--box-shadow));
+}
+.gurumi .gurumi-main {
+    width: 180px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gurumi .face {
+    width: 180px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: none;
+}
+img.umbrella {
+    width: 80px;
+    top: 40px;
+    right: 100px;
+    transform: rotate(10deg);
+}
+img.rain1 {
+    width: 15px;
+    left: 35%;
+    animation: rain 1.5s linear infinite;
+    opacity: 0;
+}
+img.rain2 {
+    width: 15px;
+    left: 45%;
+    animation: rain 1.5s linear infinite 1s;
+    opacity: 0;
+}
+img.rain3 {
+    width: 15px;
+    left: 57%;
+    animation: rain 1.5s linear infinite 0.5s;
+    opacity: 0;
+}
+@keyframes rain {
+    0% {
+        bottom: 25%;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 5%;
+    }
+}
+
+/* === cloud set === */
+img.cloud1 {
+    width: 150px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    opacity: 0.5;
+    animation: clouds 5s linear infinite;
+}
+img.cloud2 {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    opacity: 0.3;
+    animation: clouds 5s linear infinite;
+}
+img.cloud3 {
+    width: 150px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    opacity: 0.8;
+    animation: clouds 5s linear infinite;
+}
+
+@keyframes clouds {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* === sun set === */
+img.sun {
+    width: 80px;
+    left: 20px;
+    animation: sun 2s linear infinite;
+}
+
+@keyframes sun {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* === contents === */
+
+#outfit, #item {
+    width: 100%;
+}
+
+.cont-title {
+    padding: 10px 24px;
+}
+
+.cont-box {
+    width: 100%;
+    padding: 16px 0;
+}
+.cont-box .category-title {
+    font-size: 12px;
+    padding: 0 0 10px 24px;
+}
+
+.cont-box ul {
+    display: flex;
+    gap: 20px;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 24px;
+}
+.cont-box .content {
+    flex: 0 0 100px;
+    height: 120px;
+    background: var(--index-box);
+    border-radius: 10px;
+    padding: 10px 10px 30px 10px;
+    position: relative;
+    display: none;
+}
+.cont-box .content.on {
+    display: block;
+}
+.cont-box .content p {
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}

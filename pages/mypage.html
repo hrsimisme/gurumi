@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구르미 - 마이페이지</title>
+    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../css/mypage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="body">
+    <div class="wrap">
+        <header class="page-header">
+            <i class="fa-solid fa-chevron-left back-btn" onclick="location.href='../main.html'"></i>
+            <h2>마이페이지</h2>
+        </header>
+
+        <section class="profile-section">
+            <div class="profile-img"></div>
+            <h3 id="user-nickname">닉네임</h3>
+            <p id="user-id">아이디</p>
+        </section>
+
+        <section class="menu-list">
+            <div class="menu-item modal-trigger" data-target="modal-birth">
+                <span>생년월일</span>
+                <div class="right-content">
+                    <span class="value" id="birth-value">1900.01.01</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="menu-item modal-trigger" data-target="modal-gender">
+                <span>성별</span>
+                <div class="right-content">
+                    <span class="value" id="gender-value">여성</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <span>추위를 많이 타요 !</span>
+                <label class="switch">
+                    <input type="checkbox" id="cold-sensitive">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="menu-item">
+                <span>강아지 산책 유무</span>
+                <label class="switch">
+                    <input type="checkbox" id="dog-walk" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <p class="caption">이 옵션을 켜면 강아지가 산책가기에 적당한지를 알려줘요 !</p>
+        </section>
+        <section class="log-out">
+            <button type="button" class="btn-logout" onclick="handleLogout()">로그아웃</button>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="modal-birth">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close">취소</button>
+                <span class="modal-title">성별</span>
+                <button class="modal-save" data-for="birth">저장</button>
+            </div>
+            
+            <div class="picker-wrapper">
+                <div class="picker-highlight"></div>
+                <div class="picker-container-group">
+                    <div class="picker-container" id="year-container">
+                        <ul class="picker-list" id="year-list"></ul>
+                    </div>
+                    <div class="picker-container" id="month-container">
+                        <ul class="picker-list" id="month-list"></ul>
+                    </div>
+                    <div class="picker-container" id="day-container">
+                        <ul class="picker-list" id="day-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-gender">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close">취소</button>
+                <span class="modal-title">성별</span>
+                <button class="modal-save" data-for="gender">저장</button>
+            </div>
+
+            <div class="picker-wrapper">
+                <div class="picker-highlight"></div>
+                <div class="picker-container" id="gender-container">
+                        <ul class="picker-list" id="gender-list">
+                            <li>여성</li>
+                            <li>남성</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/mypage.js"></script>
+    <script src="../common/common.js"></script>
+</body>
+</html>

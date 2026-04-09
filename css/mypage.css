@@ -1,0 +1,86 @@
+/* 마이페이지 전용 스타일 */
+
+
+.profile-section {
+    text-align: center;
+    padding: 30px 0;
+}
+.profile-img {
+    width: 120px;
+    height: 120px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+#user-nickname { font-size: 20px; margin-bottom: 5px; }
+#user-id { font-size: 14px; color: #888; }
+
+.right-content { display: flex; align-items: center; gap: 10px; color: #888; }
+.caption { font-size: 10px; color: #888; text-align: right; margin-top: 10px; margin-right: 10px;}
+
+/* 피커 디자인 (간소화된 휠 방식) */
+.picker-wrapper {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.picker-highlight {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; height: 40px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    z-index: 0;
+}
+.picker-list {
+    position: relative;
+    z-index: 1;
+    padding: 55px 0;
+}
+.picker-list li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #999;
+    scroll-snap-align: center; /* 중앙에 딱 걸리게 */
+}
+.picker-list li.selected { color: #000; font-weight: bold; }
+
+
+
+/* birth picker */
+
+.picker-container-group {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    overflow: hidden;
+}
+
+.picker-container {
+    flex: 1; /* 3개가 동일한 너비 점유 */
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* 스크롤 시 딱딱 걸리는 느낌 */
+    -ms-overflow-style: none; scrollbar-width: none;
+}
+#modal-birth .picker-container::-webkit-scrollbar {
+    display: none;
+}
+/* 
+#year-container, 
+#day-container { display: none; } */
+#month-container { flex: 1; }
+
+/* 로그아웃 btn */
+
+.btn-logout {
+    width: 100%;
+    padding: 15px;
+    color: #ff3b30; /* iOS 스타일의 경고용 빨간색 */
+    font-size: 16px;
+    font-weight: bold;
+    margin: 100px 0 50px 0;
+}

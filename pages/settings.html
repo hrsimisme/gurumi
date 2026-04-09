@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구르미 - 설정</title>
+    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="body">
+    <div class="wrap">
+        <header class="page-header">
+            <i class="fa-solid fa-chevron-left back-btn" onclick="history.back()"></i>
+            <h2>설정</h2>
+        </header>
+
+        <section class="menu-list">
+            <p class="section-title">계정 정보</p>
+            <div class="menu-item modal-trigger" data-target="modal-pw">
+                <span>비밀번호 변경</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="menu-item disabled">
+                <span>전화번호</span>
+                <span class="value">010-0000-0000</span>
+            </div>
+            <div class="menu-item disabled">
+                <span>이메일</span>
+                <span class="value">gurumi@gurumi.com</span>
+            </div>
+        </section>
+
+        <section class="menu-list">
+            <p class="section-title">위치 서비스</p>
+            <div class="menu-item">
+                <span>위치 서비스 허용</span>
+                <label class="switch">
+                    <input type="checkbox" id="location-toggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="modal-pw">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close">취소</button>
+                <span class="modal-title">비밀번호 변경</span>
+                <div style="width: 30px;"></div> </div>
+            
+            <div class="pw-wrapper">
+                <input type="password" id="curr-pw" placeholder="현재 비밀번호">
+                <input type="password" id="new-pw" placeholder="새 비밀번호">
+                <input type="password" id="confirm-pw" placeholder="새 비밀번호 확인">
+            </div>
+
+            <button id="pw-submit-btn" class="submit-btn" disabled>비밀번호 변경</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../common/common.js"></script>
+</body>
+</html>
